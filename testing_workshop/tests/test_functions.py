@@ -44,6 +44,10 @@ class TestDigitalLibraryPage:
             page.get_metadata()
 
     # Exercise 2 - add test(s) for get_iiif_image_url() here
+    def test_get_iiif_image_url(self, page_url_valid):
+        page = DigitalLibraryPage(page_url_valid)
+        result = page.get_iiif_image_url()
+        assert result == "unknown"
 
     # Exercise 5 - add test for expected exception FileNotFoundAtUrl for get_iiif_image_url() here
 
