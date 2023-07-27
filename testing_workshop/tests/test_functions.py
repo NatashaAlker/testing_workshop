@@ -24,7 +24,7 @@ class TestLetter:
         letter = Letter(letter_xml)  # ARRANGE
         transcription = letter.get_transcription()  # noqa: F841 # ACT
         # Exercise 1 - fill in ASSERTION
-        assert transcription == "Letter from  Hooker to Darwin"
+        assert transcription == "Letter from  Hooker to Darwin test"
 
 
 class TestDigitalLibraryPage:
