@@ -46,8 +46,11 @@ class TestDigitalLibraryPage:
     # Exercise 2 - add test(s) for get_iiif_image_url() here
     def test_get_iiif_image_url(self, page_url_valid):
         page = DigitalLibraryPage(page_url_valid)
-        result = page.get_iiif_image_url()
-        assert result == "unknown"
+        iiif_image_url = page.get_iiif_image_url()
+        assert (
+            iiif_image_url
+            == "https://images.lib.cam.ac.uk/iiif/MS-DAR-00100-000-00001.jp2/0,1885,2986,1568/1200,630/0/default.jpg"
+        )
 
     # Exercise 5 - add test for expected exception FileNotFoundAtUrl for get_iiif_image_url() here
 
