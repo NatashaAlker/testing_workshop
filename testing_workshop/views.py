@@ -25,7 +25,7 @@ def ner(request):
 
             try:
                 item = DigitalLibraryPage(xml_url)
-                # iiif_image = item.get_iiif_image_url()  # Uncomment Exercise 2
+                iiif_image = item.get_iiif_image_url()  # Uncomment Exercise 2
 
                 letter = Letter(item.get_metadata())
                 xml_title = letter.get_title()
